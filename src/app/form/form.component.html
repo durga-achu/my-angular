@@ -1,0 +1,44 @@
+<div class="container pt-3">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 abc">
+
+            <h1>User Registration</h1>
+            <form action="" (ngSubmit)="insertFn()">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>First Name*</mat-label>
+                    <input matInput placeholder="" value="" [(ngModel)]="res.f_name" name="f_name">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Last Name*</mat-label>
+                    <input matInput placeholder="" value="" [(ngModel)]="res.l_name" name="l_name">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label></mat-label>
+                    <input matInput placeholder="" value="" type="date" [(ngModel)]="res.dob" name="dob">
+                </mat-form-field>
+
+                <div class="form-group">
+                    <input type="radio" name="gender" value="male" [(ngModel)]="res.gender"> Male
+                    <input type="radio" name="gender" value="female" [(ngModel)]="res.gender"> Female
+                    <input type="radio" name="gender" value="other" [(ngModel)]="res.gender"> Other
+                </div>
+                <br><br>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email*</mat-label>
+                    <input matInput placeholder="" value="" type="email" [(ngModel)]="res.email" name="email">
+                </mat-form-field>
+
+                <div class="bu">
+                    <button mat-raised-button color="warn">Cancel</button>
+                    <button mat-raised-button color="accent" class="bn">Register</button>
+                </div>
+                {{msg}}
+            </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>

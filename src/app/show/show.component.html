@@ -1,0 +1,20 @@
+<table border="1" align="center" width="50%">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th colspan="2">Operations</th>
+    </tr>
+
+    <tr *ngFor="let x of data index as i">
+        <td>{{x['f_name']}}</td>
+        <td>{{x['l_name']}}</td>
+        <td>{{x['dob']}}</td>
+        <td>{{x['gender']}}</td>
+        <td>{{x['email']}}</td>
+        <td><button (click)="deleted(x.id)">Delete</button></td>
+        <td><button>Update</button></td>
+    </tr>
+</table>
